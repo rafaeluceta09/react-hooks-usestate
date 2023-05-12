@@ -19,9 +19,9 @@ export const useFormState = (formItems) => {
 
     }
 
-  return (
-    {
-         formState
+    return (
+      {
+        formState
         ,onChangeFornItems
         ,onResetForm
 
