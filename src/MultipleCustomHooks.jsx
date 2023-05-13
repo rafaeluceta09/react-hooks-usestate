@@ -20,7 +20,7 @@ export const MultipleCustomHooks = () => {
             { 
             isLoader
              ? ( 
-               <div className="alert aler-info"> cargando ....</div>
+               <div className="alert aler-info mb-1"> cargando ....</div>
 
              )
              : 
