@@ -4,7 +4,7 @@ export const FormWitchCustomHooks = () => {
 
     const { formState, onChangeFornItems, resetForm: onResetForm } = useFormState({userName:'',userPassword:'',userEmail:''});
 
-    const {userName,userPassword,userEmail} = formState;
+    const { userName, userPassword, userEmail } = formState;
 
   return (
     <>

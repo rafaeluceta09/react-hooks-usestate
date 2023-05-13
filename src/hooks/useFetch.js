@@ -12,14 +12,21 @@ export const useFetch = (url) => {
         const { data, isLoader, hasError   } = state;
 
     const getFetch = async () =>{   
+
+
+        setstate({
+            ... state,
+            isLoader : true,
+
+        });
+        console.log(url);
         const resp = await fetch(url);
         const data = await resp.json();
         setstate({
             data,
-            isLoader : true,
+            isLoader : false,
             hasError : null
-
-        })
+        });
     }
     useEffect(() => {
         getFetch();
