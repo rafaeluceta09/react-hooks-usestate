@@ -19,8 +19,7 @@ export const useFetch = (url) => {
             isLoader : true,
 
         });
-        console.log(url);
-        const resp = await fetch(url);
+        console.log(url);        const resp = await fetch(url);
         const data = await resp.json();
         setstate({
             data,
