@@ -1,27 +1,24 @@
 
-import { useState } from "react"
+import { useState } from "react";
 
-export const useFormState = (formItems) => {
-    const [formState, setformState] = useState(formItems)
+export const useFormState = (initialState) => {
+    const [formState, setformState] = useState(initialState)
 
     const onChangeFornItems = ({target}) =>{
         setformState({
             ...formState,
             [target.name] : target.value
         });
-        console.log('change username');
     }
 
     const onResetForm = (e) =>{
-        e.preventDefault();
-        setformState(formItems);
-
-
+        setformState(initialState);
     }
 
     return (
       {
         formState
+        ,...formState
         ,onChangeFornItems
         ,onResetForm
 
