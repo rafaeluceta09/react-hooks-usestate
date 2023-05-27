@@ -5,17 +5,15 @@ export const useCounter = (initValue = 10) => {
     const [counter, setcounter] = useState(initValue) ;
 
     const onHandledPlus = ( value = 1 ) => {
-        setcounter( c => c + value)
+        setcounter( c => c + value) //cuando lo hacemos asi recibe el valor actualizado
 
     }
-
-    const onHandledLess = () => {
-        setcounter( ( c ) => c - 1);
+    const onHandledLess = (value = 1 ) => {
+        setcounter( ( c ) => c - value);
 
     }
-
     const reset = () => {
-        setcounter(10);
+        setcounter(initValue);
 
     }
 

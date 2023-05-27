@@ -17,8 +17,8 @@ export const useFormState = (initialState) => {
 
     return (
       {
-        formState
-        ,...formState
+        ...formState
+        ,formState
         ,onChangeFornItems
         ,onResetForm
 
